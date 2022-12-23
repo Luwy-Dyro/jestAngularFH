@@ -1,0 +1,12 @@
+<h1>Poke</h1>
+
+<div *ngIf="!chari; else elseBlock">
+    <h2>Loading...</h2>
+</div>
+
+<ng-template #elseBlock>
+
+    <h3>{{chari?.name | titlecase}} </h3>
+    <img [src]="chari?.sprites?.front_default" [alt]="chari?.name">
+
+</ng-template>
